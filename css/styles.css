@@ -1,0 +1,53 @@
+
+
+
+td {
+    white-space: normal !important; 
+    word-wrap: break-word;  
+  }
+
+table {
+    table-layout: fixed;
+  }
+
+
+  .break-div{
+    width: 100%;
+    border-bottom: 3px dotted black ;
+  }
+
+
+  body{
+    min-height: 100vh;
+    background-color: #f6fef8;
+  }
+
+  #submit{
+    background-color: #aaf0d1;
+    color: black;
+    border-color: #aaf0d1;
+    
+  }
+
+
+  #submit:hover{
+    background-color: #d0f0fb;
+    
+    
+  }
+
+  #visit{
+    background-color: #14b5eb;
+    border-color: #14b5eb;
+    color: black;
+  }
+
+  #visit:hover{
+    background-color: #d0f0fb;
+    
+    
+  }
+
+  .table32{
+    background-color: black !important;
+  }
