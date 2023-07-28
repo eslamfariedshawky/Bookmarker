@@ -3,6 +3,8 @@ var siteUrl = document.getElementById("site-url");
 var submit = document.getElementById("submit");
 var reset =document.getElementById("reset")
 var valid =false;
+var webinput =""
+ webinput =websiteName.value.toString();
 
 
 
@@ -65,7 +67,15 @@ function isValidUrl(string) {
 
   function validateAll()
   {
-    if(valid==true)
+
+    if(valitadeDuplicate()==false)
+    {
+      valid =false
+      swal("this Name already Taken please choose Another Name" );
+
+      return;
+    }
+    if(valid==true )
     {
         add();
         preview();
@@ -74,7 +84,7 @@ function isValidUrl(string) {
     }
     else{
         valid =false
-        swal("Site Name or Url is not valid, Please follow the rules below :", "Site name must contain at least 3 characters  And   Site URL must be a valid one : Ex (https://www.example.com/)" );
+        swal("Site Name or Url is not valid, Please follow the rules below :", "Site name must contain at least 3 characters  And   Site URL must be a valid one : Ex (https://www.example.com/) OR its dulicate name" );
         console.log("false entry ")
     }
   }
@@ -152,6 +162,28 @@ function isValidUrl(string) {
     }
   }
 
+  
+ function valitadeDuplicate(){
+
+      console.log(websiteName.value)
+      
+      for (var i =0 ; i < data.length ; i++ )
+        { 
+          console.log(i)
+          console.log(data[i].webName)
+          // console.log(data[i].webName.toUppercase())
+          if(websiteName.value.toUpperCase() == data[i].webName.toUpperCase() )
+          {
+            console.log("found duplicate")
+            return false;
+          }
+           
+            
+        }
+        console.log("didnt find duplicate ")
+        return true;
+       
+ }
 
 
 
